@@ -1,0 +1,8 @@
+<h1>Editing Job</h1>
+
+<%= render 'form' %>
+
+<ul class='nav'>
+  <li><%= link_to 'Show', @job %></li>
+  <li><%= link_to 'Delete', job_path(@job), confirm: %Q{Are you sure?}, method: :delete %></li>
+</ul>

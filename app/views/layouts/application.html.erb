@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JobBoard</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%- if flash[:notice] %>
+    <div id='notice'>
+      <%= notice %>
+    </div>
+  <%- end %>
+
+<%= yield %>
+
+<ul class='nav horizontal'>
+  <li><%= link_to 'Jobs', jobs_path %></li>
+  <%- if session[:user_id] %>
+    <li><%= link_to 'Inbox', '/inbox' %></li>
+  <%- end %>
+</ul>
+</body>
+</html>

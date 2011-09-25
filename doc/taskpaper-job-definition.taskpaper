@@ -1,0 +1,22 @@
+
+Job Board:
+- Create user resource. @done
+	- username, password, validated_at, --timestamps @done
+- Create login controller - /login @done
+	-  Create a registration page @done
+	- Create an actionmailer mailer @done
+	- Create a validation landing page /login/validate @done
+	- Create a login and logout function /login/authenticate @done
+	- Create a restricted_access helper for before filtering requires_user @done
+- Create jobs resource. @done
+	- Title, company, description, user_id, timestamps @done
+	- Write validation tests @done
+- Create resourceful jobs route - /jobs @done
+	- Write resourceful tests @done
+	- Flesh out resourceful methods @done
+- Create comments resource. @done
+	- user_id, job_id, content, timestamps @done
+	- Write validation tests @done
+- Create inbox
+	- Write functional tests
+	- Develop inbox

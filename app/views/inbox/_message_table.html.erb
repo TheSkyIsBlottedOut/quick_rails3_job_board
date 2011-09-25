@@ -1,0 +1,31 @@
+<%- hide_job_link ||= false %>
+<%- if messages.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th width='600px'>Message</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- messages.each do |msg| %>
+        <tr class='<%= cycle('odd','even') %>'>
+          <td><%= msg.user.username %> @ <%= msg.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+          <td><%= truncate(msg.content, length: 100) %></td>
+          <td>
+            <ul class='nav'>
+              <%- unless hide_job_link %>
+                <li><%= link_to('View Job', job_path(msg.job)) %></li>
+              <%- end %>
+              <li><%= link_to('Delete', %Q{/inbox/delete/#{msg.id}}, confirm: 'Are you sure?', method: :delete)%></li>
+              <li><%= link_to('View', %Q{/inbox/view/#{msg.id}}) %></li>
+            </ul>
+          </td>
+        </tr>
+      <%- end %>
+    </tbody>
+  </table>
+<%- else %>
+  No messages!
+<%- end %>

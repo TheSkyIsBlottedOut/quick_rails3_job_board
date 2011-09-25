@@ -1,0 +1,8 @@
+<h3><%= @message.user.username %> @ <%= @message.created_at %></h3>
+<h4>Job: <%= @message.job.title %></h4>
+<ul class='horizontal nav'>
+  <li><%= link_to('View Job', job_path(@message.job)) %></li>
+  <li><%= link_to('Delete', %Q{/inbox/delete/#{@message.id}}, confirm: 'Are you sure?', method: :delete)%></li>
+</ul>
+<p><%= @message.content %></p>
+

@@ -1,0 +1,63 @@
+*{margin:0px;padding:0px;text-decoration:none;}
+html{height:100%;margin-bottom:1px;}
+body {
+  /* background */
+  background-color:   #fff; 
+    
+  /* font */
+  color:              #000;
+  font-family:        Helvetica,Verdana,sans-serif;
+  font-size:          12px;
+}
+
+/*
+ *        ELEMENTS
+ */
+hr{border:0px;color:#000;height:1px;width:100%;text-align:left;}
+h1,h2,h3,h4,h5,h6{font-family: Helvetica,Verdana,sans-serif;}
+h1,h2{margin-bottom:10px; text-align:center;}
+h1{font-size:24px;}
+h2{font-size:21px;}
+h3{color:#489124;font-size:18px;text-align:left;padding:5px;margin-top:10px;}
+p{line-height:16px;padding:5px;}
+a{color:#158585;text-decoration:none;}
+  a:hover{color:#839215; text-decoration:underline;}
+form {margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px dotted silver;}
+fieldset{border:0px;padding:5px;}
+fieldset input, fieldset textarea{color:#942342;vertical-align:top; margin-bottom: 5px;}
+fieldset input:focus{color:#001;font-style:normal;background-color:#eee;}
+fieldset input[type='text'], fieldset input[type='password'], fieldset select, fieldset textarea {display:block;min-width: 300px;}
+fieldset label{float:left;vertical-align:top;width:150px;}
+
+/* TABLES */
+table{border-collapse:collapse;min-width:500px;}
+table thead tr td {
+/*color*/       background-color: black; color: #fff;
+/*position*/    padding:2px 20px 2px 20px;margin:0px;min-width:100px;
+/*font*/        font-size:17px;font-family:Helvetica,Verdana,sans-serif; letter-spacing:0.4ex;
+}
+table thead tr td:last-child{min-width:250px;}
+table tbody tr td{padding-left:5px;margin-top:5px;margin-bottom:5px;}
+table tbody tr.odd td{background-color:#eee;color:#000;border-bottom:1px solid #281d08;}
+table tbody tr.even td{background-color:#ddd;color:#003;}
+
+/* STANDARD CLASSES */
+.indented {padding-left: 15px;}
+.left{float:left;font-size:100%;margin-top:5px;color:#999;background-color:#334;}
+.right{float:right;font-size:100%;margin-top:5px;color:#999;background-color:#334;}
+.spacer{width:100%;height:15px;}
+.topmargin{margin-top: 25px;}
+.relief{box-shadow:1px 1px 2px #000;}
+
+/* Standard Styles */
+
+span.false_image {padding: 0; color: #888; text-align: center; display:inline-block; margin: 0; background: #eee; border: 1px solid #888; margin-bottom: 5px; overflow: hidden; font: Roundy; box-shadow: 1px 1px 2px #000;-webkit-box-shadow: 1px 1px 2px #000;}
+span.false_image h1 { font-size: 18px; padding: 1px; margin: 1px;}
+span.false-image h2 { font-size: 10px; padding: 1px; margin: 1px;}
+ul.blank {list-style-type: none;}
+ul.horizontal li {padding-right: 10px; list-style-type: none; display: inline-block; }
+
+#jobs-list {width: 800px;margin-left: 10px;margin-top: 30px;border-top: 1px solid #000;}
+#jobs-list div.job {width: 100%;border-bottom: 1px solid #000;}
+div.even {background-color: #ddd;}
+

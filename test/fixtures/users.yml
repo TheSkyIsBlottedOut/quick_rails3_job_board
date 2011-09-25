@@ -1,0 +1,26 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+user1:
+  username: username
+  passcrypt: 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+  email: user@test.com
+  validated_at: 2011-09-24 09:11:36
+
+user2:
+  username: username2
+  email: user2@test.com
+  passcrypt: 2aa60a8ff7fcd473d321e0146afd9e26df395147
+  validated_at: 2011-09-24 09:11:36
+
+bad_password:
+  username: bad_password
+  email: bad_password@test.com
+  passcrypt: my_password
+  validated_at: 2011-09-24 09:11:36
+  
+bad_email:
+  username: bad_email
+  email: at.com
+  passcrypt: 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+  validated_at: 2011-09-24 09:11:36
+  

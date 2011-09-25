@@ -1,0 +1,11 @@
+<h1>Login</h1>
+<form method='post' action='/login/authenticate'>
+  <fieldset>
+    <label for='username'>Username</label>
+    <%= text_field(:user, :username) %>
+    
+    <label for='password'>Password</label>
+    <%= password_field(:user, :password) %>
+    <input type='submit'/>
+  </fieldset>
+</form>

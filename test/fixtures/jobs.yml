@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+job1:
+  title: This is a job
+  company: This is a company
+  description: This is a description
+  user: user1
+
+job2:
+  title: Job!!!
+  company: Company!!!
+  description: Words!!!
+  user: user2

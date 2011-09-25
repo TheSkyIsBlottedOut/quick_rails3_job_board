@@ -1,0 +1,19 @@
+<h1>Job List</h1>
+<%- if current_user %>
+  <%= link_to('Create', '/jobs/new') %>
+<%- else %>
+  <%= link_to('Login', '/login') %>
+<%- end %>
+<%= will_paginate(@jobs) %>
+<div id='jobs-list'>
+  <%- if @jobs.empty? %>
+    <h1>No jobs available!</h1>
+  <%- else %>
+    <%- @jobs.each do |job| %>
+      <div class='job <%= cycle('odd', 'even') %>'>
+        <h2><%= link_to([job.company.titleize, job.title.titleize].join(':'), job_path(job)) %></h2>
+        <p><%= job.description %></p>
+      </div>
+    <%- end %>
+  <%- end %>
+</div>

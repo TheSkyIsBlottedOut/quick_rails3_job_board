@@ -1,0 +1,20 @@
+<h1><%= @job.title %></h1>
+<h2><%= @job.company %></h2>
+<%- if @job.user == current_user %>
+  <li><%= link_to('Edit', edit_job_path(@job)) %></li>
+<%- end %>
+<p><%= @job.description %></p>
+<%- if current_user %>
+  <strong>Post Comment</strong>
+  <%= form_for(@comment, url:comment_job_path(@job)) do |c| %>
+    <%= c.text_area :content, rows: 5 %>
+    <input type='submit'/>
+  <%- end %>
+<%- end %>
+<ul>
+
+</ul>
+<%- if @job.user == current_user && @job.comments.any? %>
+  <h2>Most Recent Responses</h2>
+  <%= render 'inbox/message_table', messages: @job.comments.limit(20), hide_job_link: true %>
+<%- end %>

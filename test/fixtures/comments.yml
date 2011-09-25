@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: user1
+  job: job1
+  content: i hate this thing
+
+two:
+  user: user2
+  job: job1
+  content: words

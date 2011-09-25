@@ -1,0 +1,27 @@
+<h1>Register!</h1>
+<%= form_for(@user, url: '/login/create') do |f| %>
+  <%- if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <%- @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <%- end %>
+      </ul>
+    </div>
+  <%- end %>
+  <fieldset>
+    <div class='field'>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+    <div class='field'>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div class='field'>
+      <%= f.label :password %>
+      <%= f.password_field :passcrypt %>
+    </div>
+  </fieldset>
+  <input type='submit'/>
+<%- end %>
